@@ -1,0 +1,144 @@
+
+@import standard.sass
+
+html
+    background-color: $second
+
+.wrapper
+    position: relative
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    overflow: hidden
+    width: 100%
+    height: 100%
+
+
+    &.active
+
+        .menu
+            i
+                color: $font-color-02
+        nav
+            z-index: 10
+
+        main
+            opacity: 0.5
+            // margin-left: 10rem
+
+            .page
+                overflow: hidden
+
+                .content
+                    filter: blur(5px)
+
+    nav
+        position: absolute
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        min-width: 10rem
+        height: 100%
+        top: 0
+        left: 0
+        background-color: $second
+        z-index: 0
+        border-radius: 0 1rem 1rem 0
+        padding-top: 8rem
+
+
+
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column           
+            margin: 0 0.5rem 0 0
+            color: $font-color-01
+            font-size: 1.2rem
+            padding: 2rem
+            text-decoration: none
+            text-transform: uppercase
+            letter-spacing: 0.1rem
+            height: 7.5rem
+            width: 10rem
+            cursor: pointer
+
+            &:last-child
+                margin: 0 0 0 0
+
+            &:hover, &:focus, &:active
+                img
+                    transform: translate(0, -10px)
+                    transition: 150ms all    
+
+            &.men-active
+                border-radius: 0 1rem 1rem 0
+                border-left: 1px solid $second
+                border-right: 1px solid $border-01
+                border-top: 1px solid $border-01
+                border-bottom: 1px solid $border-02
+                box-shadow: 1px 1px 2px 0px $border-02
+                transition: 250ms all
+                
+
+    .menu
+        color: $prime
+        position: absolute
+        top: 0
+        left: 0
+        background-color: transparent
+        border: none
+        font-size: 2rem
+        z-index: 100
+        cursor: pointer
+        width: 10rem
+        height: 4rem
+        color: black
+        padding: 2rem 0 0 3.5rem
+
+        i
+            color: $second
+            font-size: 3rem
+
+    main
+        width: 100vw
+        height: 100vh
+        padding-top: 4rem
+        position: relative
+        transition: 250ms all
+
+        .page
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            z-index: 4
+            padding: 7rem
+            width: 100vw
+            overflow-x: hidden
+            height: 100vh
+            background-color: $prime
+            transition: 250ms all
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            flex-direction: column
+
+            .content
+                max-width: 800px
+
+                section
+                    border-bottom: 1px solid $border-01
+
+    
+ 
+
+
+
+
+
+
+
+
